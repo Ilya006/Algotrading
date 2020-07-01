@@ -1,0 +1,163 @@
+.header
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  height: 5.6rem
+  z-index: 50
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+  &__body
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 5.67rem
+  &__logo
+    position: relative  
+    z-index: 5
+    display: flex
+    align-items: center
+    text-decoration: none
+  &__img
+    display: block
+    max-width: 100%
+    margin-right: 1rem
+  &__hero
+    text-transform: uppercase
+    font-size: 1.71rem
+    font-weight: 700
+    text-decoration: none
+  &__menu
+    flex-grow: 1
+    height: 100%
+  &__list
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 100%
+    padding: 0
+    margin: 0
+    height: 100%
+    & li 
+      position: relative
+      display: block
+      list-style: none
+      text-transform: uppercase
+  &__link
+    font-size: 1rem
+    font-weight: 700
+    color: $secondary
+    height: 100%
+    cursor: pointer
+    transition: color 0.2s
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      bottom: -2rem
+      width: 0
+      height: 2px
+      border-radius: 1px
+      background: $blue
+      transition: width 0.2s linear
+    &:hover 
+      color: #000000
+      &::after
+        width: 100%
+  &__contacts
+    position: relative
+    z-index: 5
+    margin-left: 6rem
+  &__burger
+    display: none
+    overflow: hidden
+
+.contacts
+  font-size: 1.71rem
+  font-weight: 700
+  text-decoration: none
+  color: $secondary
+  strong
+    color: $dark
+
+@media (max-width: 840px)
+  body.lock
+    overflow: hidden
+  .header
+    &__burger
+      display: block
+      position: relative
+      z-index: 3
+      width: 30px
+      height: 20px
+      cursor: pointer
+      &::before, &::after
+        content: ''
+        position: absolute
+        background-color: $secondary
+        width: 100%
+        height: 2px
+        left: 0
+        transition: all 0.3s ease 0s
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+      span 
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: $secondary
+        left: 0
+        top: 9px
+        transition: all 0.3s ease 0s
+      .active
+        &::after
+          transform: rotate(-45deg)
+    &__contacts
+      position: relative
+      margin-right: 2rem
+    &__logo
+      flex-grow: 1
+    &__menu
+      position: fixed
+      z-index: 5
+      top: 6rem
+      right: -100%
+      width: 18rem
+      height: 10rem 
+      overflow: auto
+      transition: all 0.4s ease 0s
+    &__list
+      flex-direction: column
+      align-items: center 
+      background-color: rgba(213, 226, 240, 0.98)
+      border-radius: 10px
+    &__link
+      color: $dark
+      &::after
+        display: none  
+  .header__burger.active::before
+    transform: rotate(45deg)
+    top: 9px
+  .header__burger.active::after
+    transform: rotate(-45deg)
+    bottom: 9px
+  .header__burger.active
+    span 
+      transform: scale(0)
+  .header__menu.active
+    right: 0.5rem 
+    
+       
+
+    
+
