@@ -316,7 +316,8 @@ template {
   .button--blue {
     color: #fff;
     background-color: #0842b7;
-    padding: 1.14rem 2.85rem; }
+    padding: 1.14rem 2.85rem;
+    box-shadow: 0 0 15px 8px #bccce6; }
   .button--light {
     color: #0842b7;
     background-color: transparent;
