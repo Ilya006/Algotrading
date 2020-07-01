@@ -1,12 +1,12 @@
 .hero
-  padding-top: 6.07rem 
-  background: #e9f0f8 url('../image/hero-bg.png') no-repeat top/cover
+  padding-bottom: 5rem
+  background:  url('../image/hero-bg.png') no-repeat top/cover
   min-height: 100vh
   background-size: 100vw
   &__content
     display: flex
     flex-direction: column
-    padding-top: 11rem
+    padding-top: 17rem
   &__subtitle
     margin: 0
     font-size: 2.57rem
@@ -26,6 +26,16 @@
     font-weight: 300
     background-color: $light
     padding: 1.35rem 
+  &__info
+    display: flex
+    justify-content: space-between
+    border-bottom: 1px solid #eaf1f7
+    padding-bottom: 7rem
+  &__col--50
+    max-width: 50%
+  &__col--flex
+    display: flex
+    justify-content: space-between
 
 .intro
   display: flex
@@ -48,3 +58,30 @@
   margin: 0
   font-size: 5.1rem
   font-weight: 300
+
+.info
+  &__wrap 
+    display: flex
+    flex-direction: column
+  &__intro
+    font-size: 24.5rem
+    font-weight: 100
+    &--left
+      margin-left: -1rem  
+    &--blue
+      font-size: 8rem
+      color: #06bee1
+  &__title
+    font-size: 1.71rem
+    font-weight: 700
+    color: $dark
+    max-width: 19.3rem
+    margin: -0.8rem 0 0.9rem
+  &__subtitle
+    max-width: 19.81rem
+    font-size: 1.14rem
+    font-weight: 300
+    color: $DarkBlue
+    line-height: 1.71rem
+  &__instruments
+    padding-left: 1rem  

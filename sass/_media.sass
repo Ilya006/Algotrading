@@ -15,6 +15,18 @@
       margin-left: 0
     &__logo
       margin-right: 0
+  .info
+    &__img
+      margin: 0 auto
+
+@media (max-width: 919px)
+  // hero***
+  .hero
+    &__col--50
+      max-width: 100%
+  .info
+    &__intro
+      font-size: 18.5rem
 
 @media (max-width: 787px)
   //header******
@@ -46,8 +58,13 @@
     &__subtitle
       font-size: 1.8rem
     &__text
-      font-size: 1rem
+      font-size: 1.1rem
       max-width: 24rem
+    &__info
+      flex-direction: column
+    &__col--flex
+      flex-direction: column
+      padding-left: 1rem
     
   .intro
     &__text
@@ -60,6 +77,20 @@
     max-width: 14rem  
     min-width: 7rem
 
+  .info
+    &__intro
+      font-size: 14rem
+      &--blue
+        font-size: 5rem
+    &__title
+      font-size: 1.5rem
+      max-width: 100%
+    &__subtitle
+      font-size: 1.1rem
+      max-width: 100%
+    &__wrap
+      text-align: center
+      align-items: center
 @media (max-width: 660px)
   //hero***
   .hero
@@ -68,9 +99,6 @@
       border-radius: 10px
       max-width: 32rem
       padding: 5px 0 5px
-  
-
-
   
 @media (max-width: 570px)
   //header******

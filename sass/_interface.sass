@@ -7,13 +7,21 @@
   font-weight: 700
   text-transform: uppercase
   cursor: pointer
+  &:focus, &:active
+    outline: none
   &--blue
     color: $light
     background-color: $blue
     padding: 1rem 0
     min-width: 17.14rem
-    box-shadow: 0 0 15px 8px rgba(188, 204, 230, 1)
+    box-shadow: 0 0 15px 5px rgba(188, 204, 230, 1)
+    transition: box-shadow 0.3s linear
+    &:hover
+      box-shadow: 0 0 18px 15px rgba(188, 204, 230, 1)
   &--light
     color: $blue
     background-color: transparent
     padding: 1rem 0
+    transition: box-shadow 0.3s linear
+    &:hover
+      box-shadow: 0 0 15px 8px rgba(188, 204, 230, 1)
