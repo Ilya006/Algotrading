@@ -346,6 +346,13 @@ template {
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 .container {
   max-width: 1160px;
   margin: 0 auto;
@@ -522,7 +529,7 @@ body {
     right: 0.5rem; } }
 
 .hero {
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
   background: url("../image/hero-bg.png") no-repeat top/cover;
   min-height: 100vh;
   background-size: 100vw; }
@@ -610,6 +617,21 @@ body {
 
 .info__instruments {
   padding-left: 1rem; }
+
+.calculator__title {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.57rem;
+  font-weight: 300;
+  max-width: 35rem; }
+
+.calculator__subtitle {
+  margin: 2.40rem auto 3.57rem;
+  max-width: 28rem;
+  text-align: center;
+  font-size: 1.14rem;
+  font-weight: 300;
+  line-height: 1.8rem; }
 
 @media (max-width: 1300px) {
   .intro__text {
