@@ -1,21 +1,25 @@
 .calculator
-  background: url('../image/calc-left.png') no-repeat left bottom, url('../image/calc-right.png') no-repeat right bottom
+  background: url('../image/calculator/lines-bg-l.png') no-repeat left bottom, url('../image/calculator/lines-bg-r.png') no-repeat right bottom
   padding-bottom: 120px
   &__subtitle
     margin: 0 auto 3.57rem
     max-width: 28rem
     text-align: center
-    font-size: 1.14rem
-    font-weight: 300
-    line-height: 1.8rem
   &__inner
     display: flex
     justify-content: space-between
+    @media (max-width: 992px)
+      flex-wrap: wrap
   &__content
     display: flex
     flex-direction: column
-    flex: 0 0 22%
+    max-width: 250px
+    @media (max-width: 992px)
+      flex: 0 0 100%
+      max-width: 100%
+      text-align: center
   &__title
+    margin-bottom: 30px
     &--sm
       font-weight: 300
       font-size: 24px
@@ -26,25 +30,39 @@
   &__subtitle
     &--sm
       text-align: start 
+  &__text
+    font-weight: 300
+    font-size: 16px
+    line-height: 25px
+    @media (max-width: 787px)
+      font-size: 15px
   &__form
     flex: 0 0 65%
+    @media (max-width: 992px)
+      flex: 1 0 100%
+      margin: 0 auto
 .form
   &__wrap
     display: flex
     flex-wrap: wrap
   &__item
     position: relative
-    flex: 0 0 50%
+    flex: 0 0 64%
     align-items: center
     padding-bottom: 40px
     margin-bottom: 40px
     border-bottom: 1px solid #bccce6
     &:nth-child(2)
-      max-width: 320px
+      max-width: 260px
+      label
+        padding-right: 0
     &:nth-child(3)
       border: none
     &:nth-child(4)
       border: none
+      max-width: 260px
+      label
+        padding-right: 0
   &__btn
     padding: 17px 28px     
 .input
@@ -60,6 +78,7 @@
   position: absolute
   left: 120px
   top: 0
-  font-size: 16px
-  font-weight: 300
-  padding-right: 50px 
+  max-width: 200px
+  @media (max-width: 1200px)
+    left: 110px
+    padding-right: 0
