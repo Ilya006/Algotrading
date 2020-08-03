@@ -3,5 +3,12 @@ $(document).ready(function() {
     $('.header__burger,.header__menu').toggleClass('active');
     $('body').toggleClass('lock');
   });
+
+  $('.slider').slick({
+    slidesToShow: 1,
+    infinite: true
+  });
+
+
 });
 

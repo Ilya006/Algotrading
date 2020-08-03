@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -305,7 +306,6 @@ template {
   display: none; }
 
 .button {
-  width: 17rem;
   font-family: 'Roboto', sans-serif;
   border: 1px solid #0842b7;
   border-radius: 5px;
@@ -323,7 +323,7 @@ template {
     box-shadow: 0 0 15px 5px #bccce6;
     transition: box-shadow 0.3s linear; }
     .button--blue:hover {
-      box-shadow: 0 0 18px 15px #bccce6; }
+      box-shadow: none; }
   .button--light {
     color: #0842b7;
     background-color: transparent;
@@ -331,6 +331,13 @@ template {
     transition: box-shadow 0.3s linear; }
     .button--light:hover {
       box-shadow: 0 0 15px 8px #bccce6; }
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2.57rem;
+  font-weight: 300;
+  max-width: 35rem; }
 
 @font-face {
   font-family: 'Roboto';
@@ -583,7 +590,7 @@ body {
     .intro__text--light {
       color: #28c2e3; }
 
-.title {
+.title-hero {
   margin: 0;
   font-size: 5.1rem;
   font-weight: 300; }
@@ -618,21 +625,160 @@ body {
 .info__instruments {
   padding-left: 1rem; }
 
-.calculator__title {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 2.57rem;
-  font-weight: 300;
-  max-width: 35rem; }
+.calculator {
+  background: url("../image/calc-left.png") no-repeat left bottom, url("../image/calc-right.png") no-repeat right bottom;
+  padding-bottom: 120px; }
+  .calculator__subtitle {
+    margin: 0 auto 3.57rem;
+    max-width: 28rem;
+    text-align: center;
+    font-size: 1.14rem;
+    font-weight: 300;
+    line-height: 1.8rem; }
+  .calculator__inner {
+    display: flex;
+    justify-content: space-between; }
+  .calculator__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 22%; }
+  .calculator__title--sm {
+    font-weight: 300;
+    font-size: 24px;
+    color: #0f1c2e;
+    margin-top: 0; }
+  .calculator__title--lg {
+    font-weight: 700; }
+  .calculator__subtitle--sm {
+    text-align: start; }
+  .calculator__form {
+    flex: 0 0 65%; }
 
-.calculator__subtitle {
-  margin: 2.40rem auto 3.57rem;
-  max-width: 28rem;
-  text-align: center;
-  font-size: 1.14rem;
-  font-weight: 300;
-  line-height: 1.8rem; }
+.form__wrap {
+  display: flex;
+  flex-wrap: wrap; }
 
+.form__item {
+  position: relative;
+  flex: 0 0 50%;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #bccce6; }
+  .form__item:nth-child(2) {
+    max-width: 320px; }
+  .form__item:nth-child(3) {
+    border: none; }
+  .form__item:nth-child(4) {
+    border: none; }
+
+.form__btn {
+  padding: 17px 28px; }
+
+.input {
+  padding: 8px 10px;
+  font-weight: 700;
+  font-size: 18px;
+  max-width: 100px;
+  border: 1px solid #bccce6; }
+  .input:focus {
+    border-color: red; }
+
+.label {
+  line-height: 20px;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  font-size: 16px;
+  font-weight: 300;
+  padding-right: 50px; }
+
+.appeal {
+  background: url("../image/appeal.png") no-repeat top/cover;
+  padding: 120px 0;
+  text-align: center; }
+  .appeal__btn {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    border-color: #fff;
+    padding: 20px 33px;
+    font-size: 17px;
+    color: #fff;
+    margin: 0 auto;
+    transition: box-shadow 0.2s linear;
+    transition: top 0.2s linear; }
+    .appeal__btn:hover {
+      top: -5px;
+      box-shadow: 0 0 15px 5px #042c7d; }
+  .appeal__content {
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 35px;
+    line-height: 125%; }
+    .appeal__content span {
+      color: #06bee1; }
+
+.dignity {
+  position: relative;
+  height: 912px;
+  background: url("../image/slider-bg.png") no-repeat center, url("../image/slider-bg-sm.png") no-repeat center; }
+  .dignity__title {
+    padding-top: 120px; }
+    .dignity__title span {
+      font-weight: 700; }
+
+/* Слайдер */
+.slick-slider {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 730px;
+  height: 100px;
+  margin: 0 auto; }
+
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  bottom: 0;
+  padding-top: 30px; }
+
+/* Лента слайдов */
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+.slick-arrow {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  font-size: 0;
+  border: none;
+  cursor: pointer; }
+  .slick-arrow:focus {
+    outline: none; }
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url("../image/arrow-left.png") no-repeat center; }
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  right: 0;
+  background: url("../image/arrow-right.png") no-repeat center; }
+
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 @media (max-width: 1300px) {
   .intro__text {
     padding: 10px;

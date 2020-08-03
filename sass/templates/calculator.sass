@@ -1,14 +1,65 @@
 .calculator
-  &__title
-    text-align: center
-    margin: 0 auto
-    font-size: 2.57rem
-    font-weight: 300
-    max-width: 35rem
+  background: url('../image/calc-left.png') no-repeat left bottom, url('../image/calc-right.png') no-repeat right bottom
+  padding-bottom: 120px
   &__subtitle
-    margin: 2.40rem auto 3.57rem
+    margin: 0 auto 3.57rem
     max-width: 28rem
     text-align: center
     font-size: 1.14rem
     font-weight: 300
     line-height: 1.8rem
+  &__inner
+    display: flex
+    justify-content: space-between
+  &__content
+    display: flex
+    flex-direction: column
+    flex: 0 0 22%
+  &__title
+    &--sm
+      font-weight: 300
+      font-size: 24px
+      color: #0f1c2e
+      margin-top: 0
+    &--lg
+      font-weight: 700
+  &__subtitle
+    &--sm
+      text-align: start 
+  &__form
+    flex: 0 0 65%
+.form
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+  &__item
+    position: relative
+    flex: 0 0 50%
+    align-items: center
+    padding-bottom: 40px
+    margin-bottom: 40px
+    border-bottom: 1px solid #bccce6
+    &:nth-child(2)
+      max-width: 320px
+    &:nth-child(3)
+      border: none
+    &:nth-child(4)
+      border: none
+  &__btn
+    padding: 17px 28px     
+.input
+  padding: 8px 10px
+  font-weight: 700
+  font-size: 18px
+  max-width: 100px
+  border: 1px solid #bccce6
+  &:focus
+    border-color: red
+.label
+  line-height: 20px
+  position: absolute
+  left: 120px
+  top: 0
+  font-size: 16px
+  font-weight: 300
+  padding-right: 50px 
