@@ -36,6 +36,10 @@
     line-height: 25px
     @media (max-width: 787px)
       font-size: 15px
+    @media (max-width: 570px)
+      margin-bottom: 7rem
+    // @media (max-width: 385px)
+      
   &__form
     flex: 0 0 65%
     @media (max-width: 992px)
@@ -45,13 +49,29 @@
   &__wrap
     display: flex
     flex-wrap: wrap
+    @media (max-width: 992px)
+      justify-content: center
   &__item
     position: relative
-    flex: 0 0 64%
+    width: 50%
     align-items: center
     padding-bottom: 40px
     margin-bottom: 40px
     border-bottom: 1px solid #bccce6
+    @media (max-width: 787px)
+      display: flex
+    @media (max-width: 570px)
+      padding-bottom: 30px
+      &:nth-child(1)
+        margin-bottom: 90px
+      &:nth-child(1)>.label
+        padding-right: 10px
+      &:nth-child(2)
+        margin-bottom: 90px
+      &:nth-child(3)
+        padding-right: 10px
+      &:nth-child(3)>.label
+        padding-right: 10px
     &:nth-child(2)
       max-width: 260px
       label
@@ -64,7 +84,10 @@
       label
         padding-right: 0
   &__btn
-    padding: 17px 28px     
+    padding: 17px 28px  
+    @media (max-width: 992px)
+      display: block
+      margin: 0 auto   
 .input
   padding: 8px 10px
   font-weight: 700
@@ -82,3 +105,13 @@
   @media (max-width: 1200px)
     left: 110px
     padding-right: 0
+  @media (max-width: 787px)
+    top: auto
+  @media (max-width: 570px)
+    padding-bottom: 90px
+    top: -65px
+    left: 0
+    
+    
+  @media (max-width: 385px)
+    top: -65px

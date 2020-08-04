@@ -544,6 +544,9 @@ body {
   background: url("../image/hero/hero-bg.png") no-repeat top/cover;
   min-height: 100vh;
   background-size: 100vw; }
+  @media (max-width: 787px) {
+    .hero {
+      padding-bottom: 4rem; } }
   .hero__content {
     display: flex;
     flex-direction: column;
@@ -572,6 +575,9 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid #eaf1f7;
     padding-bottom: 7rem; }
+    @media (max-width: 787px) {
+      .hero__info {
+        padding-bottom: 4rem; } }
   .hero__col--50 {
     max-width: 50%; }
   .hero__col--flex {
@@ -598,6 +604,9 @@ body {
   margin: 0;
   font-size: 5.1rem;
   font-weight: 300; }
+  @media (max-width: 787px) {
+    .title-hero {
+      font-size: 3rem; } }
 
 .info__wrap {
   display: flex;
@@ -669,6 +678,9 @@ body {
     @media (max-width: 787px) {
       .calculator__text {
         font-size: 15px; } }
+    @media (max-width: 570px) {
+      .calculator__text {
+        margin-bottom: 7rem; } }
   .calculator__form {
     flex: 0 0 65%; }
     @media (max-width: 992px) {
@@ -679,14 +691,33 @@ body {
 .form__wrap {
   display: flex;
   flex-wrap: wrap; }
+  @media (max-width: 992px) {
+    .form__wrap {
+      justify-content: center; } }
 
 .form__item {
   position: relative;
-  flex: 0 0 64%;
+  width: 50%;
   align-items: center;
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid #bccce6; }
+  @media (max-width: 787px) {
+    .form__item {
+      display: flex; } }
+  @media (max-width: 570px) {
+    .form__item {
+      padding-bottom: 30px; }
+      .form__item:nth-child(1) {
+        margin-bottom: 90px; }
+      .form__item:nth-child(1) > .label {
+        padding-right: 10px; }
+      .form__item:nth-child(2) {
+        margin-bottom: 90px; }
+      .form__item:nth-child(3) {
+        padding-right: 10px; }
+      .form__item:nth-child(3) > .label {
+        padding-right: 10px; } }
   .form__item:nth-child(2) {
     max-width: 260px; }
     .form__item:nth-child(2) label {
@@ -701,6 +732,10 @@ body {
 
 .form__btn {
   padding: 17px 28px; }
+  @media (max-width: 992px) {
+    .form__btn {
+      display: block;
+      margin: 0 auto; } }
 
 .input {
   padding: 8px 10px;
@@ -721,6 +756,17 @@ body {
     .label {
       left: 110px;
       padding-right: 0; } }
+  @media (max-width: 787px) {
+    .label {
+      top: auto; } }
+  @media (max-width: 570px) {
+    .label {
+      padding-bottom: 90px;
+      top: -65px;
+      left: 0; } }
+  @media (max-width: 385px) {
+    .label {
+      top: -65px; } }
 
 .appeal {
   background: #042c7d url("../image/appeal/appeal.png") no-repeat top/cover;
@@ -889,6 +935,8 @@ body {
     .hero__content {
       padding-top: 3rem; }
     .hero__question {
+      margin-top: 7rem;
+      background-color: transparent;
       font-size: 2rem;
       max-width: 17.14rem; }
     .hero__subtitle {
@@ -906,9 +954,7 @@ body {
     max-width: 23rem;
     margin-left: 1.2rem; }
   .button {
-    font-size: 1rem;
-    max-width: 14rem;
-    min-width: 7rem; }
+    font-size: 1rem; }
   .info__intro {
     font-size: 14rem; }
     .info__intro--blue {
@@ -955,7 +1001,7 @@ body {
     .hero__question {
       font-size: 1.6rem;
       max-width: 14.14rem;
-      margin-top: 14rem; }
+      margin-top: 3rem; }
     .hero__subtitle {
       font-size: 1.3rem;
       max-width: 23rem; }
