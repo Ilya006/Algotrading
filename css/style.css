@@ -541,7 +541,7 @@ body {
 
 .hero {
   padding-bottom: 8rem;
-  background: url("../image/hero/hero-bg.png") no-repeat top/cover;
+  background: #ffffff url("../image/hero/hero-bg.png") no-repeat top/cover;
   min-height: 100vh;
   background-size: 100vw; }
   @media (max-width: 787px) {
@@ -639,7 +639,7 @@ body {
   padding-left: 1rem; }
 
 .calculator {
-  background: url("../image/calculator/lines-bg-l.png") no-repeat left bottom, url("../image/calculator/lines-bg-r.png") no-repeat right bottom;
+  background: url("../image/calculator/lines-bg-l.png") no-repeat left bottom, url("../image/calculator/lines-bg-r.png") no-repeat right bottom, #ffffff;
   padding-bottom: 120px; }
   .calculator__subtitle {
     margin: 0 auto 3.57rem;
