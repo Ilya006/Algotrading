@@ -1,6 +1,8 @@
 .calculator
   background: url('../image/calculator/lines-bg-l.png') no-repeat left bottom, url('../image/calculator/lines-bg-r.png') no-repeat right bottom, #ffffff
-  padding-bottom: 120px
+  padding: 120px 0 120px
+  @media (max-width: 992px)
+    padding-top: 3.57rem
   &__subtitle
     margin: 0 auto 3.57rem
     max-width: 28rem
@@ -9,6 +11,9 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    @media (max-width: 992px)
+      padding-top: 3.57rem
+      border-top: 1px solid #eaf1f7
   &__content
     display: flex
     flex-direction: column
@@ -24,19 +29,6 @@
       font-size: 24px
       color: #0f1c2e
       margin-top: 0
-    &--lg
-      font-weight: 700
-  &__subtitle
-    &--sm
-      text-align: start 
-  &__text
-    font-weight: 300
-    font-size: 16px
-    line-height: 25px
-    @media (max-width: 787px)
-      font-size: 15px
-    @media (max-width: 570px)
-      margin-bottom: 7rem
   &__form
     flex: 0 0 65%
     @media (max-width: 992px)

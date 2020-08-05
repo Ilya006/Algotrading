@@ -1,8 +1,9 @@
 .hero
-  padding-bottom: 8rem
   background: #ffffff  url('../image/hero/hero-bg.png') no-repeat top/cover
   min-height: 100vh
   background-size: 100vw
+  border-bottom: 1px solid #eaf1f7
+  padding-top: 0
   @media (max-width: 787px)
     padding-bottom: 4rem
   &__content
@@ -13,13 +14,14 @@
     margin: 0
     font-size: 2.57rem
     font-weight: 300
+    @media (max-width: 922px)
+      font-size: 2rem
   &__text
     max-width: 26rem  
-    font-size: 1.15rem
-    font-weight: 300
     margin-top: 1.8rem
     margin-bottom: 4.5rem
-    line-height: 1.71rem
+    @media ( max-width: 992px )
+      max-width: 28rem
   &__question
     display: block
     max-width: 21.14rem
@@ -31,8 +33,6 @@
   &__info
     display: flex
     justify-content: space-between
-    border-bottom: 1px solid #eaf1f7
-    padding-bottom: 7rem
     @media (max-width: 787px)
       padding-bottom: 4rem
   &__col--50
@@ -52,11 +52,9 @@
       margin-bottom: 0.7rem
   &__text
     max-width: 23.57rem
-    font-size: 1.71rem
-    font-weight: 300
     margin-left: 3.5rem
     &--light
-      color: $heavenly
+      color: #06bee1
 
 .title-hero
   margin: 0
@@ -78,16 +76,10 @@
       font-size: 8rem
       color: #06bee1
   &__title
-    font-size: 1.71rem
-    font-weight: 700
-    color: $dark
     max-width: 19.3rem
     margin: -0.8rem 0 0.9rem
+    
   &__subtitle
     max-width: 19.81rem
-    font-size: 1.14rem
-    font-weight: 300
-    color: $DarkBlue
-    line-height: 1.71rem
   &__instruments
     padding-left: 1rem  

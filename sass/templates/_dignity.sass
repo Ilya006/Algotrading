@@ -86,7 +86,11 @@
 
 .slider
   &__img
-    display: none
+    display: inline-block
+    overflow: hidden
+    opacity: 0
+    max-width: 0
+    transition: opacity 0.6s cubic-bezier(0.82, -0.07, 1, 1)
     img
       display: block
       width: 100%
@@ -100,16 +104,19 @@
     font-size: 16px
     font-weight: 300
   &__subtitle
-    display: none
+    opacity: 0
+    transition: opacity 0.6s cubic-bezier(0.82, -0.07, 1, 1)
 .slick-center
   .slider__img
-    display: inline-block
+    max-width: 100%
+    opacity: 1
+    overflow: visible
   .slider__title
     font-size: 24px
     font-weight: 700
   .slider__subtitle
-    display: inline-block
     line-height: 160%
+    opacity: 1
   .slider__wrap
     transform: translateY(0)
   

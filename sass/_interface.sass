@@ -9,14 +9,17 @@
   &:focus, &:active
     outline: none
   &--blue
+    position: relative
+    top: 0
     color: $light
     background-color: $blue
-    padding: 1rem 0
+    padding: 1rem 2.8rem
     min-width: 17.14rem
-    box-shadow: 0 0 15px 5px rgba(188, 204, 230, 1)
-    transition: box-shadow 0.3s linear
+    box-shadow: 0 5px 10px rgba(188, 204, 230, 1)
+    transition: box-shadow 0.3s linear, top 0.2s linear
     &:hover
-      box-shadow: none
+      box-shadow: 0 10px 10px rgba(188, 204, 230, 1)
+      top: -3px
   &--light
     color: $blue
     background-color: transparent
@@ -30,5 +33,24 @@
   font-size: 2.57rem
   font-weight: 300
   max-width: 35rem
+  &--bold
+    font-weight: 700
   @media (max-width: 787px)
     font-size: 27px 
+.text
+  font-size: 16px
+  font-weight: 300
+  line-height: 25px
+  &--lg
+    font-size: 24px
+    font-weight: 300
+    line-height: 28px
+    color: #0f1c2e
+  &--bold
+    font-weight: 700
+    font-size: 24px
+  @media ( max-width: 992px )
+    font-size: 18px
+section
+  padding: 120px 0 120px 0
+    

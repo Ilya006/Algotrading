@@ -9,7 +9,8 @@ $(document).ready(function() {
     initialSlide: 2,
     adaptiveHeight: true,
     centerMode: true,
-    infinite: true
+    infinite: true,
+    variableWidth: true
   });
 
 
