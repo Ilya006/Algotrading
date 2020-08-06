@@ -11,14 +11,17 @@ $(document).ready(function() {
     centerMode: true,
     infinite: true,
     arrows: true,
+    edge: 1,
+    touchThreshold: 15,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 992,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          arrows: false
+          arrows: false,
+          dots: true
         }
       },
     ]
