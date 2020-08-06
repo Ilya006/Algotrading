@@ -6,13 +6,25 @@ $(document).ready(function() {
 
   $('.slider').slick({
     slidesToShow: 3,
-    initialSlide: 2,
+    initialSlide: 1,
     adaptiveHeight: true,
     centerMode: true,
     infinite: true,
-    variableWidth: true
-  });
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false
+        }
+      },
+    ]
 
+    
+  });
 
 });
 
