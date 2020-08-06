@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   $('.slider').slick({
     slidesToShow: 3,
-    initialSlide: 1,
+    initialSlide: 0,
     adaptiveHeight: true,
     centerMode: true,
     infinite: true,
