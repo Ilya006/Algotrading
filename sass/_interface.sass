@@ -37,11 +37,13 @@ section
       box-shadow: 0 0 15px 8px rgba(188, 204, 230, 1)
 .title
   text-align: center
-  margin: 0 auto
   font-size: 2.57rem
   font-weight: 300
   &--bold
+    font-size: 2.57rem
     font-weight: 700
+    @media (max-width: 787px)
+      font-size: 27px 
   @media (max-width: 787px)
     font-size: 27px 
 .text
@@ -56,6 +58,8 @@ section
   &--bold
     font-weight: 700
     font-size: 24px
+    line-height: 28px
+    color: #0f1c2e
   @media ( max-width: 992px )
     font-size: 18px
 

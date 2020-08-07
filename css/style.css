@@ -349,11 +349,14 @@ section {
 
 .title {
   text-align: center;
-  margin: 0 auto;
   font-size: 2.57rem;
   font-weight: 300; }
   .title--bold {
+    font-size: 2.57rem;
     font-weight: 700; }
+    @media (max-width: 787px) {
+      .title--bold {
+        font-size: 27px; } }
   @media (max-width: 787px) {
     .title {
       font-size: 27px; } }
@@ -369,7 +372,9 @@ section {
     color: #0f1c2e; }
   .text--bold {
     font-weight: 700;
-    font-size: 24px; }
+    font-size: 24px;
+    line-height: 28px;
+    color: #0f1c2e; }
   @media (max-width: 992px) {
     .text {
       font-size: 18px; } }
@@ -695,7 +700,7 @@ body {
         text-align: center; } }
   .calculator__title {
     max-width: 35rem;
-    margin-bottom: 30px; }
+    margin: 0 auto 30px; }
   .calculator__form {
     flex: 0 0 65%; }
     @media (max-width: 992px) {
@@ -833,7 +838,8 @@ body {
   background: url("../image/dignity/dignity-bg-sm.png") no-repeat center bottom, url("../image/dignity/dignity-lines.png") no-repeat center;
   overflow-x: hidden; }
   .dignity__title {
-    max-width: 35rem; }
+    max-width: 35rem;
+    margin: 0 auto; }
     .dignity__title span {
       font-weight: 700; }
 
@@ -1106,6 +1112,53 @@ body {
         flex: 0 0 100%; } }
   .box__text {
     text-align: start; }
+
+.timetable {
+  background: url("../image/timetable/timetable-bg.png") no-repeat center bottom; }
+  .timetable__title {
+    max-width: 490px;
+    text-align: start;
+    margin: 0 0 110px 0; }
+    @media (max-width: 787px) {
+      .timetable__title {
+        margin-bottom: 50px;
+        max-width: 350px; } }
+  @media (max-width: 787px) and (max-width: 430px) {
+    .timetable__title {
+      margin-bottom: 0; } }
+  .timetable__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .timetable__item {
+    flex: 0 0 165px; }
+    @media (max-width: 992px) {
+      .timetable__item {
+        flex: 0 0 185px; } }
+    @media (max-width: 787px) {
+      .timetable__item {
+        flex: 0 0 50%;
+        text-align: center;
+        margin-top: 40px; } }
+    @media (max-width: 430px) {
+      .timetable__item {
+        flex: 0 0 100%; } }
+
+.timetable-table__subtitle {
+  margin: 45px 0 30px; }
+  @media (max-width: 787px) {
+    .timetable-table__subtitle {
+      margin: 15px 0 10px; } }
+
+.timetable-table__text {
+  margin: 0; }
+  @media (max-width: 787px) {
+    .timetable-table__text {
+      max-width: 185px;
+      margin: 0 auto; } }
+  @media (max-width: 430px) {
+    .timetable-table__text {
+      max-width: 225px; } }
 
 @media (max-width: 1300px) {
   .intro__text {
