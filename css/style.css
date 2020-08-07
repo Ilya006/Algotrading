@@ -305,6 +305,18 @@ template {
 [hidden] {
   display: none; }
 
+main {
+  padding-top: 70px; }
+  @media (max-width: 992px) {
+    main {
+      padding-top: 50px; } }
+
+section {
+  padding: 120px 0 120px 0; }
+  @media (max-width: 992px) {
+    section {
+      padding: 50px 0 50px 0; } }
+
 .button {
   font-family: 'Roboto', sans-serif;
   border: 1px solid #0842b7;
@@ -361,9 +373,6 @@ template {
   @media (max-width: 992px) {
     .text {
       font-size: 18px; } }
-
-section {
-  padding: 120px 0 120px 0; }
 
 @font-face {
   font-family: 'Roboto';
@@ -655,11 +664,7 @@ body {
   padding-left: 1rem; }
 
 .calculator {
-  background: url("../image/calculator/lines-bg-l.png") no-repeat left bottom, url("../image/calculator/lines-bg-r.png") no-repeat right bottom, #ffffff;
-  padding: 120px 0 120px; }
-  @media (max-width: 992px) {
-    .calculator {
-      padding-top: 3.57rem; } }
+  background: url("../image/calculator/lines-bg-l.png") no-repeat left bottom, url("../image/calculator/lines-bg-r.png") no-repeat right bottom, #ffffff; }
   .calculator__subtitle {
     margin: 0 auto 3.57rem;
     max-width: 28rem;
@@ -1026,39 +1031,81 @@ body {
     padding-top: 65px; }
   .training__box {
     padding-top: 65px; }
+    @media (max-width: 992px) {
+      .training__box {
+        padding: 0; } }
 
 .picture {
+  margin: 0 -10px 0 -10px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 787px) {
+    .picture {
+      flex-direction: column; } }
   .picture__wrap {
     position: relative;
     max-width: 555px;
-    width: 50%; }
+    width: 50%;
+    padding: 0 10px 0 10px; }
+    @media (max-width: 787px) {
+      .picture__wrap {
+        width: 100%;
+        margin: 20px auto 0; } }
   .picture__img img {
     display: inline-block;
     max-width: 100%; }
   .picture__title {
     position: absolute;
-    bottom: 135px;
+    top: 50%;
     left: 50px;
     max-width: 180px;
     margin: 0;
     color: #ffffff;
     font-weight: 700; }
+    @media (max-width: 1120px) {
+      .picture__title {
+        top: 30%; } }
+    @media (max-width: 992px) {
+      .picture__title {
+        top: 20%; } }
   .picture__text {
     position: absolute;
     bottom: 30px;
     left: 50px;
     max-width: 277px;
     color: #ffffff; }
+    @media (max-width: 992px) {
+      .picture__text {
+        max-width: 300px; } }
 
 .box {
   display: flex;
   justify-content: space-between;
   margin: 0 -20px 0 -20px; }
+  @media (max-width: 1120px) {
+    .box {
+      margin: 0 -10px 0 -10px; } }
+  @media (max-width: 992px) {
+    .box {
+      flex-wrap: wrap;
+      justify-content: space-around; } }
   .box__wrap {
     flex: 0 0 25%;
     padding: 0 20px 0 20px; }
+    @media (max-width: 1120px) {
+      .box__wrap {
+        padding: 0 10px 0 10px; } }
+    @media (max-width: 992px) {
+      .box__wrap {
+        flex: 0 0 50%;
+        text-align: center;
+        max-width: 350px;
+        margin-top: 60px; } }
+    @media (max-width: 787px) {
+      .box__wrap {
+        flex: 0 0 100%; } }
+  .box__text {
+    text-align: start; }
 
 @media (max-width: 1300px) {
   .intro__text {
@@ -1137,11 +1184,10 @@ body {
     padding: 5px 0 5px; } }
 
 @media (max-width: 570px) {
-  .header__img {
-    width: 20px;
-    margin-right: 0.7rem; }
   .header__link {
     font-size: 0.9rem; }
+  .header__contacts {
+    margin-right: 1rem; }
   .title {
     font-size: 1.8rem; }
   .hero {
