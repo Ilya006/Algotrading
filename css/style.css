@@ -588,7 +588,7 @@ body {
   .hero__content {
     display: flex;
     flex-direction: column;
-    padding-top: 17rem; }
+    padding-top: 167px; }
   .hero__subtitle {
     margin: 0;
     font-size: 2.57rem;
@@ -1160,6 +1160,56 @@ body {
     .timetable-table__text {
       max-width: 225px; } }
 
+.advantages {
+  background-color: #eaf1f7;
+  text-align: center; }
+  .advantages__title {
+    margin: 0; }
+
+.holder {
+  display: flex;
+  flex-direction: column; }
+  .holder__row {
+    margin-top: 60px; }
+    @media (max-width: 787px) {
+      .holder__row {
+        margin-top: 80px; } }
+  .holder__wrap {
+    display: flex;
+    flex-wrap: wrap; }
+    @media (max-width: 992px) {
+      .holder__wrap {
+        margin: 0 -10px 0; } }
+  .holder__item {
+    flex: 0 0 33.33%;
+    padding: 0 10px 0; }
+    @media (max-width: 787px) {
+      .holder__item {
+        flex: 0 0 100%;
+        margin-top: 40px; } }
+    .holder__item img {
+      display: block;
+      width: 27px;
+      height: 27px;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+  .holder__title {
+    margin-top: 0; }
+    @media (max-width: 787px) {
+      .holder__title {
+        margin-bottom: 0; } }
+    .holder__title--sm {
+      font-size: 16px; }
+      @media (max-width: 992px) {
+        .holder__title--sm {
+          font-size: 18px; } }
+  .holder__text {
+    max-width: 295px;
+    margin: 0 auto; }
+    @media (max-width: 787px) {
+      .holder__text {
+        max-width: 450px; } }
+
 @media (max-width: 1300px) {
   .intro__text {
     padding: 10px;
@@ -1198,7 +1248,7 @@ body {
   .contacts {
     font-size: 1rem; }
   .hero {
-    padding-top: 5rem; }
+    padding-top: 50px; }
     .hero__content {
       padding-top: 3rem; }
     .hero__question {
@@ -1244,7 +1294,7 @@ body {
   .title {
     font-size: 1.8rem; }
   .hero {
-    padding-top: 5rem; }
+    padding-top: 40px; }
     .hero__content {
       padding-top: 3rem; }
     .hero__question {
@@ -1265,3 +1315,7 @@ body {
     font-size: 0.9rem;
     max-width: 100%;
     min-width: 100%; } }
+
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 0; } }

@@ -1,0 +1,43 @@
+.advantages
+  background-color: #eaf1f7
+  text-align: center
+  &__title
+    margin: 0
+
+.holder 
+  display: flex
+  flex-direction: column
+  &__row
+    margin-top: 60px
+    @media  ( max-width: 787px )
+      margin-top: 80px
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    @media  ( max-width: 992px )
+      margin: 0 -10px 0
+  &__item
+    flex: 0 0 33.33%
+    padding: 0 10px 0
+    @media  ( max-width: 787px )
+      flex: 0 0 100%
+      margin-top: 40px
+    img
+      display: block
+      width: 27px
+      height: 27px
+      margin: 0 auto
+      margin-bottom: 20px
+  &__title
+    margin-top: 0
+    @media  ( max-width: 787px )
+      margin-bottom: 0
+    &--sm
+      font-size: 16px
+      @media  ( max-width: 992px )
+        font-size: 18px
+  &__text
+    max-width: 295px
+    margin: 0 auto
+    @media  ( max-width: 787px )
+      max-width: 450px
