@@ -25,9 +25,12 @@ $(document).ready(function() {
         }
       },
     ]
-
-    
   });
+
+  $('.lesson').slick({
+    slidesToShow: 1,
+  });
+
 
 });
 

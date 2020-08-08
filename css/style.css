@@ -382,21 +382,21 @@ section {
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
   font-display: swap; }
 
@@ -1160,6 +1160,18 @@ body {
     .timetable-table__text {
       max-width: 225px; } }
 
+.lessons {
+  position: relative;
+  height: 864px;
+  background: url("../image/lessons/bg.png") no-repeat center; }
+
+.slick-track {
+  display: flex; }
+
+.slick-slider {
+  position: absolute;
+  top: 50%; }
+
 .advantages {
   background-color: #eaf1f7;
   text-align: center; }
@@ -1209,6 +1221,38 @@ body {
     @media (max-width: 787px) {
       .holder__text {
         max-width: 450px; } }
+
+.price {
+  text-align: center; }
+  .price__subtitle {
+    margin: 0 auto;
+    max-width: 360px; }
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -10px 0;
+  text-align: center; }
+  .cost__list {
+    list-style: none;
+    padding: 0;
+    height: 183px; }
+  .cost__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 33.33%;
+    padding: 0 10px 0; }
+  .cost__element {
+    padding: 15px 0;
+    max-width: 215px;
+    margin: auto; }
+  .cost__button {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin: 0 auto; }
+  .cost__number {
+    color: #06bee1; }
 
 @media (max-width: 1300px) {
   .intro__text {
