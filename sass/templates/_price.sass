@@ -3,27 +3,58 @@
   &__subtitle
     margin: 0 auto
     max-width: 360px
+    @media  ( max-width: 992px )
+      max-width: 393px
+  &__wrap
+    margin-top: 185px
+    padding-top: 80px
+    @media  ( max-width: 787px )
+      padding-top: 0
 
 .cost
   display: flex
   justify-content: space-between
   margin: 0 -10px 0
   text-align: center
+  @media  ( max-width: 787px )
+    flex-direction: column
   &__list
-    
     list-style: none
     padding: 0
-    height: 183px
+    height: 260px
+    @media  ( max-width: 992px )
+      height: 280px
+    @media  ( max-width: 787px )
+      height: auto
   &__item
     display: flex
     flex-direction: column
     justify-content: space-between
     flex: 0 0 33.33%
     padding: 0 10px 0
+    &:nth-child(2)
+      border-left: 1px solid #eaf1f7
+      border-right: 1px solid #eaf1f7
+    @media  ( max-width: 787px )
+      padding: 40px 0
+      &:nth-child(2)
+        border-top: 1px solid #eaf1f7
+      &:nth-child(3)
+        border-top: 1px solid #eaf1f7
+        padding-bottom: 0
   &__element
     padding: 15px 0
     max-width: 215px
     margin: auto
+    @media  ( max-width: 992px )
+      max-width: 100%
+    @media  ( max-width: 787px )
+      padding: 10px 0
+      max-width: 270px
+  &__title
+    margin-top: 0
+    @media  ( max-width: 787px )
+      margin-bottom: 20px
   &__button
     padding-right: 50px
     padding-left: 50px
