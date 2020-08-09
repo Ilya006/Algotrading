@@ -1,9 +1,165 @@
 .lessons
   position: relative
-  height: 864px 
   background: url('../image/lessons/bg.png') no-repeat center
-.slick-track
+  overflow-x: hidden
+  top: -75px
+  .slick-slide.slick-active
+    &:active,
+      outline: none 
+      border: none
+    &:focus
+      outline: none 
+      border: none
+  .slick-slide.slick-current
+    &:active,
+      outline: none 
+      border: none
+    &:focus
+      outline: none 
+      border: none
+  .slick-track
+    display: flex
+  .slick-slider
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .slick-arrow
+    position: absolute
+    font-size: 0
+    bottom: 70px
+    width: 60px
+    height: 25px
+    background: url('../image/lessons/arrow.png') no-repeat center
+    border: none
+    cursor: pointer
+    z-index: 3
+    &:focus
+      outline: none 
+  .slick-prev
+    transform: rotate(180deg)
+    left: 20px
+  .slick-next
+    right: 20px
+  .slick-list 
+    height: 100% 
+    width: 100%
+  .slick-dots
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    padding-left: 0
+    li
+      list-style: none
+      &:focus
+        outline: none
+      &:active
+        outline: none
+      button
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        border: none
+        background-color: transparent
+        color: #68799a
+        font-size: 16px
+        font-weight: 300
+        cursor: pointer
+        &:focus
+          outline: none
+        &:active
+          outline: none
+.lessons .slick-dots .slick-active button
+  background-color: #06bee1
+  color: #ffffff
+.lesson
+  &__item 
+    padding-bottom: 30px
+  .wrapper
+    &__title
+      margin-top: 0
+      color: #ffffff
+  .slick-disabled
+    opacity: 0.3
+.content-wrap
   display: flex
-.slick-slider
-  position: absolute
-  top: 50%
+  justify-content: space-between
+  &__col
+    flex: 0 0 50%
+  &__title
+    color: #ffffff
+  &__list
+    list-style-type: none
+    counter-reset: my-counter
+    &--border
+      padding-bottom: 70px
+      border-bottom: 1px solid #153c67
+      margin-bottom: 0
+    li
+      position: relative;
+      color: #fff
+      padding-bottom: 30px
+      max-width: 420px
+      &::before
+        counter-increment: my-counter
+        content: counter(my-counter, upper-alpha) '.'
+        position: absolute
+        left: -20px
+        top: 0
+        font-size: 16px
+        color: #68799a
+  &__text
+    color: #68799a
+    max-width: 452px
+    padding-left: 40px
+    margin: 0
+    margin: 30px 0 90px
+    &--bgi
+      height: 55px
+      padding-left: 90px
+      background: url('../image/lessons/img.png') no-repeat center left
+      max-width: 430px  
+  &__text--bg
+    color: #ffff
+  &__bonus
+    padding-top: 80px
+  &__btn
+    display: flex
+    justify-content: center
+.btn__item
+  position: relative
+  top: 0
+  font-size: 16px
+  font-weight: 700
+  width: 265px
+  padding: 15px 0
+  margin: 0 15px
+  border-radius: 5px
+  cursor: pointer
+  z-index: 5
+  transition: background-color 0.2s linear, color 0.2s linear, border 0.1s linear, top 0.2s linear, box-shadow 0.2s linear
+  &:focus
+    outline: none
+    border: none
+  &:active
+    outline: none
+    border: none
+  &--light
+    border: 1px solid #ffffff
+    background-color: transparent
+    color: #ffffff
+    text-transform: uppercase
+    &:hover
+      background-color: #0842b7
+      color: #ffffff
+      border: 1px solid #0842b7
+      top: -3px
+  &--blue
+    background-color: #0842b7
+    color: #ffffff
+    text-transform: uppercase
+    border: 1px solid #0842b7
+    box-shadow: 0 0 20px 10px #042971
+    &:hover
+      box-shadow: 0 10px 10px 5px #042971
+      top: -3px

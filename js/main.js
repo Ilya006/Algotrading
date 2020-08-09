@@ -29,6 +29,9 @@ $(document).ready(function() {
 
   $('.lesson').slick({
     slidesToShow: 1,
+    dots: true,
+    infinite: false,
+    touchThreshold: 15,
   });
 
 
