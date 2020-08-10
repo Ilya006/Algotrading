@@ -35,5 +35,13 @@ $(document).ready(function() {
   });
 
 
+    $('.slider-reviews').slick({
+      slidesToShow: 1,
+      dots: false,
+      arrows: false,
+      variableWidth: true,
+      centerMode: true,
+    });
+
 });
 

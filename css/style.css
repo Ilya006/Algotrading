@@ -1520,6 +1520,66 @@ body {
     .form-top__btn:hover {
       top: 0; }
 
+.reviews__title {
+  margin-bottom: 60px;
+  margin-top: 0; }
+
+.slider-reviews__item {
+  width: 945px;
+  margin: 0 30px; }
+
+.slider-reviews__video {
+  position: relative;
+  max-width: 950px;
+  min-height: 390px;
+  display: flex;
+  margin: 0 auto;
+  background: url("../image/reviews/img1.png") no-repeat center;
+  border: 1px solid #eaf1f7; }
+
+.slider-reviews__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  display: block;
+  cursor: pointer; }
+
+.slider-reviews__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  margin: 50px auto 0; }
+
+.reviews .slick-track {
+  display: flex; }
+
+.reviews .slick-slide.slick-active:active {
+  outline: none;
+  border: none; }
+
+.reviews .slick-slide.slick-active:focus {
+  outline: none;
+  border: none; }
+
+.reviews .slick-slide.slick-cloned:active {
+  outline: none;
+  border: none; }
+
+.reviews .slick-slide.slick-cloned:focus {
+  outline: none;
+  border: none; }
+
+.reviews .slick-slide:active {
+  outline: none;
+  border: none; }
+
+.reviews .slick-slide:focus {
+  outline: none;
+  border: none; }
+
 @media (max-width: 1300px) {
   .intro__text {
     padding: 10px;
