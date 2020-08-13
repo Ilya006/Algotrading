@@ -11,7 +11,7 @@
   &__text 
     color: #ffffff
     margin: 30px auto 45px
-    max-width: 420px
+    max-width: 620px
   &__element
     margin: 0 auto
     max-width: 360px
@@ -46,7 +46,7 @@
     min-height: 390px
     display: flex
     margin: 0 auto
-    background: url('../image/reviews/img1.png') no-repeat center
+    
     border: 1px solid #eaf1f7
   &__play
     position: absolute
@@ -60,7 +60,7 @@
     flex-direction: column
     align-items: center
     text-align: center
-    max-width: 520px
+    max-width: 620px
     margin: 50px auto 0
 
 .reviews
@@ -88,3 +88,28 @@
       outline: none 
       border: none
 
+  .slider-reviews__video
+    background: none
+  .slick-center
+    background: url('../image/reviews/img1.png') no-repeat center top
+  .slick-dots
+    position: absolute
+    left: 50%
+    bottom: -20px
+    transform: translateX(-50%)
+    display: flex
+    list-style: none
+    padding: 0
+    li
+      list-style: none
+      font-size: 0
+      width: 10px
+      height: 10px
+      background-color: transparent
+      border-radius: 50%  
+      border: 1px solid #30c7e5
+      margin: 0 5px
+      button
+        display: none
+    .slick-active
+      background-color: #30c7e5

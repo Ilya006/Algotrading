@@ -41,6 +41,15 @@ $(document).ready(function() {
       arrows: false,
       variableWidth: true,
       centerMode: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            infinite: true,
+            dots: true
+          }
+        },
+      ]
     });
 
 });
