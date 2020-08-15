@@ -1,0 +1,128 @@
+.footer
+  padding: 120px 0
+  @media  ( max-width: 992px )
+    padding: 50px 0
+  &__wrap
+    display: flex
+    flex-direction: column
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    &--second
+      align-items: start
+      margin-top: 30px
+      @media  ( max-width: 480px )
+        .footer__col
+          &:nth-child(1)
+            display: none
+            
+  &__col
+    text-align: start
+    flex: 0 0 25%
+    &--none
+      @media  ( max-width: 787px )
+        display: none
+    &--sm
+      @media  ( max-width: 992px )
+        flex: 0 0 20%
+    &--bg
+      @media  ( max-width: 992px )
+        flex: 0 0 30%
+    &--empty
+      display: block
+      left: 0
+      width: 130px
+      height: 1px
+      background-color: #eaf1f7
+    @media  ( max-width: 787px )
+      flex: 0 0 33%
+    @media  ( max-width: 480px )
+      flex: 0 0 50%
+  &__form--wrap
+    display: flex
+    align-items: center
+  &__input
+    width: 100%
+    border: 1px solid #dee9f3
+    padding: 16px 18px
+    font-size: 16px
+    font-weight: 300
+    color: #777777
+    border-radius: 5px 0 0 5px 
+    border-right: none
+    &:active
+      outline: none
+    &:focus
+      outline: none
+  &__btn
+    width: 22px
+    height: 17px
+    background: url('../image/footer/email.svg') no-repeat center
+    padding: 25px 25px
+    border: 1px solid #dee9f3
+    border-radius: 0 5px 5px 0
+    border-left: none
+    cursor: pointer
+    &:active
+      outline: none
+    &:focus
+      outline: none
+  &__link
+    display: block
+    text-decoration: none
+    color: #777777
+    font-size: 16px
+    font-weight: 300
+    margin: 5px 0
+    &:hover
+      color: #0f1c2e
+    &--dark
+      color: #061826
+  &__title
+    font-size: 24px
+    color: #0f1c2e
+  &__icon
+    position: relative
+    top: 0
+    display: block
+    border: 1px solid #0842b7
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    cursor: pointer
+    transition: top 0.2s linear
+    &:hover
+      top: -3px
+  &__social
+    display: flex
+    justify-content: space-between
+    @media  ( max-width: 787px )
+      flex: 0 0 100%  
+      max-width: 260px
+      margin: 20px auto 0 
+      @media  ( max-width: 480px )
+        flex-direction: row
+  &__fb
+    background: url('../image/footer/fb.svg') no-repeat center
+  &__vk
+    background: url('../image/footer/vk.svg') no-repeat center
+  &__yt
+    background: url('../image/footer/yt.svg') no-repeat center
+  &__inst
+    background: url('../image/footer/inst.svg') no-repeat center
+  &__up
+    background: url('../image/footer/up.svg') no-repeat center
+  &__mailing
+    @media  ( max-width: 787px )
+      flex: 0 0 60%
+    @media  ( max-width: 480px )
+      flex: 0 0 100%
+      margin-top: 10px
+.col
+  &__item
+    max-width: 160px  
+    margin: 0
+    line-height: 150%
+    min-height: 1px

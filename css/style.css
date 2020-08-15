@@ -1518,7 +1518,7 @@ body {
     margin: 0 auto;
     box-shadow: none; }
     .form-top__btn:hover {
-      top: 0; }
+      top: -3px; }
 
 .reviews__title {
   margin-bottom: 60px;
@@ -1692,6 +1692,169 @@ body {
       .guarantee__btn {
         padding: 15px 20px;
         line-height: 135%; } }
+
+.questions {
+  background: url("../image/questions/bg.png") no-repeat center/cover;
+  text-align: center; }
+  .questions__wrap {
+    display: flex;
+    flex-direction: column; }
+  .questions__title {
+    color: #ffffff; }
+  .questions__text {
+    color: #ffffff;
+    margin: 0 auto 30px;
+    max-width: 440px; }
+  .questions__item {
+    margin: 0 15px;
+    max-height: 46px; }
+    @media (max-width: 992px) {
+      .questions__item {
+        margin: 0 auto 25px; }
+        .questions__item:last-child {
+          margin-bottom: 0; } }
+
+.form__wrap--sm {
+  display: flex;
+  margin: 0 -15px; }
+  @media (max-width: 992px) {
+    .form__wrap--sm {
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 360px; } }
+
+.footer {
+  padding: 120px 0; }
+  @media (max-width: 992px) {
+    .footer {
+      padding: 50px 0; } }
+  .footer__wrap {
+    display: flex;
+    flex-direction: column; }
+  .footer__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    .footer__row--second {
+      align-items: start;
+      margin-top: 30px; }
+      @media (max-width: 480px) {
+        .footer__row--second .footer__col:nth-child(1) {
+          display: none; } }
+  .footer__col {
+    text-align: start;
+    flex: 0 0 25%; }
+    @media (max-width: 787px) {
+      .footer__col--none {
+        display: none; } }
+    @media (max-width: 992px) {
+      .footer__col--sm {
+        flex: 0 0 20%; } }
+    @media (max-width: 992px) {
+      .footer__col--bg {
+        flex: 0 0 30%; } }
+    .footer__col--empty {
+      display: block;
+      left: 0;
+      width: 130px;
+      height: 1px;
+      background-color: #eaf1f7; }
+    @media (max-width: 787px) {
+      .footer__col {
+        flex: 0 0 33%; } }
+    @media (max-width: 480px) {
+      .footer__col {
+        flex: 0 0 50%; } }
+  .footer__form--wrap {
+    display: flex;
+    align-items: center; }
+  .footer__input {
+    width: 100%;
+    border: 1px solid #dee9f3;
+    padding: 16px 18px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #777777;
+    border-radius: 5px 0 0 5px;
+    border-right: none; }
+    .footer__input:active {
+      outline: none; }
+    .footer__input:focus {
+      outline: none; }
+  .footer__btn {
+    width: 22px;
+    height: 17px;
+    background: url("../image/footer/email.svg") no-repeat center;
+    padding: 25px 25px;
+    border: 1px solid #dee9f3;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    cursor: pointer; }
+    .footer__btn:active {
+      outline: none; }
+    .footer__btn:focus {
+      outline: none; }
+  .footer__link {
+    display: block;
+    text-decoration: none;
+    color: #777777;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 5px 0; }
+    .footer__link:hover {
+      color: #0f1c2e; }
+    .footer__link--dark {
+      color: #061826; }
+  .footer__title {
+    font-size: 24px;
+    color: #0f1c2e; }
+  .footer__icon {
+    position: relative;
+    top: 0;
+    display: block;
+    border: 1px solid #0842b7;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: top 0.2s linear; }
+    .footer__icon:hover {
+      top: -3px; }
+  .footer__social {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 787px) {
+      .footer__social {
+        flex: 0 0 100%;
+        max-width: 260px;
+        margin: 20px auto 0; } }
+  @media (max-width: 787px) and (max-width: 480px) {
+    .footer__social {
+      flex-direction: row; } }
+  .footer__fb {
+    background: url("../image/footer/fb.svg") no-repeat center; }
+  .footer__vk {
+    background: url("../image/footer/vk.svg") no-repeat center; }
+  .footer__yt {
+    background: url("../image/footer/yt.svg") no-repeat center; }
+  .footer__inst {
+    background: url("../image/footer/inst.svg") no-repeat center; }
+  .footer__up {
+    background: url("../image/footer/up.svg") no-repeat center; }
+  @media (max-width: 787px) {
+    .footer__mailing {
+      flex: 0 0 60%; } }
+  @media (max-width: 480px) {
+    .footer__mailing {
+      flex: 0 0 100%;
+      margin-top: 10px; } }
+
+.col__item {
+  max-width: 160px;
+  margin: 0;
+  line-height: 150%;
+  min-height: 1px; }
 
 @media (max-width: 1300px) {
   .intro__text {
