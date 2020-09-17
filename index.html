@@ -949,6 +949,37 @@
   </div>
 </footer>
 
+<div class="modal">
+  <div class="modal__dialog">
+    <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
+    <button class="modal__close"></button>
+    <form action="send.php" class="form modal__form">
+      <div class="input-group">
+        <label class="modal__label modal__label--name" for="user-name">Имя</label>
+        <input class="modal__input form-top__input" type="text" id="user-name" name="userName" autocomplete="on" placeholder = "Ваше имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'" >
+      </div>
+
+      <div class="input-group">
+        <label class="modal__label modal__label--phone" for="user-phone">Телефон</label>
+        <input class="modal__input form-top__input" type="tel" id="user-phone" name="userPhone" autocomplete="on" placeholder = "Ваш номер телефона" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш номер телефона'" >
+      </div>
+
+      <div class="input-group">
+        <label class="modal__label modal__label--email" for="user-email">Email</label>
+        <input class="modal__input form-top__input" type="email" name="userEmail" id="user-email" autocomplete="on" placeholder="Ваш Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваш Email'">
+      </div>
+
+      <div class="input-group input-group--policy">
+        <input class="modal__input--policy" type="checkbox" name="userPolicy" id="policy-checkbox">
+        <label class="modal__label--policy" for="policy-checkbox">Я соглашаюсь с обработкой данных</label>
+      </div>
+
+      <input class="modal__submit" type="submit" value="Отправить">
+
+    </form>
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
