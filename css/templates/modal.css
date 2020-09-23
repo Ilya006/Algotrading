@@ -1,9 +1,10 @@
 .modal {
-  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -30,7 +31,8 @@
     width: 30px;
     height: 30px;
     border: none;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0; }
     .modal__close:focus {
       outline: none; }
     .modal__close:active {
@@ -51,7 +53,8 @@
     font-size: 16px;
     font-weight: 700;
     border-radius: 5px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    cursor: pointer; }
   .modal__input {
     margin-top: 5px; }
     .modal__input--policy {
@@ -63,3 +66,24 @@
 .form {
   display: flex;
   flex-direction: column; }
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible; }
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px; }
+
+#user-phone-error, #user-name-error, #user-email-error, #userPolicy-error {
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  color: tomato;
+  font-size: 12px; }
+
+#userPolicy-error {
+  left: 0; }
+
+input.error {
+  border: 1px solid red; }

@@ -52,8 +52,8 @@
         <p class="hero__text text">Всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</p>
         <div class="hero__intro intro">
           <div class="intro__actions">
-            <button class="intro__button button button--blue">начать обучение</button>
-            <button class="intro__button button button--light">узнать подробнее</button>
+            <button class="intro__button button button--blue" data-toggle="modal">начать обучение</button>
+            <button class="intro__button button button--light" data-toggle="modal">узнать подробнее</button>
           </div>
           <div class="intro__text text--lg">Ваш собственный прибыльный торговый робот за <span class="intro__text--light">30 дней!</span></div>
         </div>
@@ -952,7 +952,7 @@
 <div class="modal">
   <div class="modal__dialog">
     <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
-    <button class="modal__close"></button>
+    <button class="modal__close" data-toggle="modalClose"></button>
     <form action="send.php" class="form modal__form">
       <div class="input-group">
         <label class="modal__label modal__label--name" for="user-name">Имя</label>
@@ -982,6 +982,8 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
