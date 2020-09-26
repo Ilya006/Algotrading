@@ -60,6 +60,7 @@ function buildCopy() {
     'app/js/**/*',
     'app/images/dest/**/*',
     'app/**/*.html',
+    'app/fonts/**/*'
   ], { base: 'app' })
   .pipe(dest('dist'));
 }
