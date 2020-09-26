@@ -11,12 +11,22 @@
     margin: 0 auto 30px
     max-width: 440px 
   &__item
-    margin: 0 15px
     max-height: 46px
     @media  ( max-width: 992px )
       margin: 0 auto 25px
       &:last-child
         margin-bottom: 0  
+  &__input-group
+    position: relative
+    margin: 0 -15px
+    width: 100%
+    max-width: 270px
+    margin: 0 15px
+    @media  ( max-width: 992px )
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+
 .form__wrap--sm
   display: flex
   margin: 0 -15px
@@ -24,5 +34,29 @@
     flex-direction: column
     margin: 0 auto
     max-width: 360px
-    
+
+.form-bottom
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  @media  ( max-width: 992px )
+    display: flex
+    flex-direction: column
+    align-items: center
+
+#nameBottom-error, #phoneBottom-error, #emailBottom-error
+  position: absolute
+  bottom: -15px
+  left: 0
+  width: 100%
+  font-size: 12px
+  text-align: left
+  padding-left: 10px
+  border: 1px solid tomato
+  border-radius: 5px 
+  color: tomato
+  background-color: #fff
+  transition: background-color 0.2s ease
+
+
   

@@ -41,6 +41,7 @@
     @media  ( max-width: 480px )
       flex: 0 0 50%
   &__form--wrap
+    position: relative
     display: flex
     align-items: center
   &__input
@@ -126,3 +127,14 @@
     margin: 0
     line-height: 150%
     min-height: 1px
+
+#emailFooter-error
+  position: absolute
+  bottom: -18px
+  left: 0
+  color: tomato
+  font-size: 12px
+.invalidfooter
+  border-color: tomato
+.invalidfooter + .footer__btn
+  border-color: tomato

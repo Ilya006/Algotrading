@@ -6,8 +6,8 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
-var newer = require('gulp-newer');
-var del = require('del');
+const newer = require('gulp-newer');
+const del = require('del');
 
 
 function browsersync() {
@@ -18,13 +18,10 @@ function browsersync() {
 };
 
 function scripts() {
-  return src([
-    // добавить все файлы js в один
-    'app/js/main.js'
-  ])
+  return src('app/js/main.js')
   .pipe(concat('main.min.js'))
   .pipe(uglify())
-  .pipe(dest('app/js'))
+  .pipe(dest('app/js/'))
   .pipe(browserSync.stream())
 };
 

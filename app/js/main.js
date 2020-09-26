@@ -53,15 +53,24 @@ $(document).ready(function() {
     });
 
     // модаотное окно
-    let modalBtn = document.querySelector('[data-toggle=modal]'),
+    let modalBtn = document.querySelectorAll('[data-toggle=modal]'),
         modal = document.querySelector('.modal'),
         modalDialog = document.querySelector('.modal__dialog'),
         modalClose = document.querySelector('[data-toggle=modalClose]');
+        console.log(modalBtn);
+
+    for( openModal of modalBtn) {
+      if(openModal) {
+        openModal.addEventListener('click', function(event) {
+          modal.classList.add('modal--visible');
+        })
+      }
+    };
 
     // открыть модальное окно
-    modalBtn.onclick = function() {
-      modal.classList.add('modal--visible');
-    };
+    // modalBtn.onclick = function() {
+    //   modal.classList.add('modal--visible');
+    // };
 
     // закрытие по кнопке
     modalClose.onclick = function() {
@@ -76,15 +85,14 @@ $(document).ready(function() {
     });
 
     // закрытие по esc
-    window.addEventListener('keypress', function(evt) {
-      if (window.event.keyCode) {
-        console.log(window.event.keyCode);
-        // modal.classList.remove('modal--visible')
-      }
-    });
+    // window.addEventListener('keypress', function(evt) {
+    //   if (window.event.keyCode) {
+    //     modal.classList.remove('modal--visible')
+    //   }
+    // });
 
 
-    // валидация формы
+    // валидация формы модального окна
     $('.modal__form').validate({
       rules: {
         userName: {
@@ -112,9 +120,112 @@ $(document).ready(function() {
       }
     });
 
+    // валидация формы form-top
+    $('.form-top__element').validate({
+      errorClass: 'invalid',
+      rules: {
+        formName: {
+          required: true,
+          minlength: 2
+        },
+        formTel: {
+          required: true,
+          minlength: 17,
+        },
+        formEmail: {
+          required: true,
+          email: true
+        },
+      },
+      errorElement: 'em',
+      messages: {
+        formName: {
+          required: 'Введите Имя',
+          minlength: 'Имя слишком короткое'
+        },
+        formTel: {
+          required: 'Введите телефон',
+          minlength: 'Нерный телефон'
+        },
+        formEmail: {
+          required: 'Ведите Email',
+          email: 'Формат: "..@domain.com"'
+        },
+      }
+    });
+
+    // валидация формы внизу
+    $('.form-bottom ').validate({
+      errorClass: 'invalidBottom',
+      rules: {
+        nameBottom: {
+          required: true,
+          minlength: 2
+        },
+        phoneBottom: {
+          required: true,
+          minlength: 17,
+        },
+        emailBottom: {
+          required: true,
+          email: true
+        },
+      },
+      errorElement: 'em',
+      messages: {
+        nameBottom: {
+          required: 'Введите Имя',
+          minlength: 'Имя слишком короткое'
+        },
+        phoneBottom: {
+          required: 'Введите телефон',
+          minlength: 'Нерный телефон'
+        },
+        emailBottom: {
+          required: 'Ведите Email',
+          email: 'Формат: "..@domain.com"'
+        },
+      }
+    });
+
+    // валидация формы footer
+    $('.footer__form').validate({
+      errorClass: 'invalidfooter',
+      rules: {
+        emailFooter: {
+          required: true,
+          email: true
+        }
+      },
+      errorElement: 'em',
+      messages: {
+        emailFooter: {
+          required: 'Ведите Email',
+          email: 'Формат: "..@domain.com"'
+        }
+      }
+    });
+
 
     // маска
-    $('#user-phone').mask('+7(000) 000-00-00')
+    $('#form-top').mask('+7(000) 000-00-00');
+    $('#user-phone').mask('+7(000) 000-00-00'); 
+    $('#phoneBottom').mask('+7(000) 000-00-00'); 
 
+    // плавная прокрутка
+    let anchors = document.querySelectorAll('body a[href*="#scroll"] ' );
+
+    for (anchor of anchors) {
+      if(anchor){
+        anchor.addEventListener('click', function(event) {
+          event.preventDefault();
+          anchotId = this.getAttribute('href');
+          document.querySelector(anchotId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          })
+        })
+      }
+    }
 });
 

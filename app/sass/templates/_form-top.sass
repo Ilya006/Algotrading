@@ -22,6 +22,7 @@
     padding: 14px 13px
     border-radius: 5px
     border: none
+    border: 1px solid #fff
     &:focus
       outline: none
     &:active
@@ -112,3 +113,21 @@
         display: none
     .slick-active
       background-color: #30c7e5
+
+#formName-error, #form-top-error, #formEmail-error
+  position: absolute
+  bottom: -15px
+  left: 0
+  width: 100%
+  font-size: 12px
+  text-align: left
+  padding-left: 10px
+  border: 1px solid tomato
+  border-radius: 5px 
+  color: tomato
+  background-color: #fff
+  transition: background-color 0.2s ease
+input
+  &.invalid
+    border-color: tomato
+    border: 1px solid tomato
