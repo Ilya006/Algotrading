@@ -1,0 +1,50 @@
+.results
+  border-top: 1px solid #eaf1f7
+  background: url('../images/dest/results/bg.png') no-repeat bottom left
+  &__wrap 
+    display: flex
+    justify-content: space-between
+    @media ( max-width: 992px )
+      flex-direction: column
+  &__col--1
+    flex: 0 0 40%
+  &__col--2
+    flex: 0 0 60%
+  &__title
+    max-width: 280px
+    text-align: inherit
+    @media ( max-width: 992px )
+      text-align: center
+      margin: 0 auto 30px
+  &__text
+    max-width: 245px
+    @media ( max-width: 992px )
+      text-align: center
+      margin: 0 auto 30px
+      max-width: 400px  
+.results-content
+  display: flex
+  justify-content: space-around
+  margin: 0 -10px
+  @media ( max-width: 992px )
+    justify-content: space-around  
+  @media ( max-width: 582px ) 
+    flex-wrap: wrap
+  &__item 
+    max-width: 258px
+    padding: 0 10px
+    @media ( max-width: 992px )
+      max-width: 275px
+    @media ( max-width: 582px )
+      margin-bottom: 40px
+      border-bottom: 1px solid #eaf1f7
+      padding-bottom: 40px
+      &:last-child
+        border: none
+        padding-bottom: 0
+        margin-bottom: 0
+  &__img
+    display: inline-block
+    width: 100%
+  &__text
+    margin-bottom: 0

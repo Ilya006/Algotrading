@@ -1,0 +1,37 @@
+.timetable
+  background: url('../images/dest/timetable/timetable-bg.png') no-repeat center bottom
+  &__title
+    max-width: 490px
+    text-align: start
+    margin: 0 0 110px 0
+    @media  ( max-width: 787px )
+      margin-bottom: 50px
+      max-width: 350px
+      @media  ( max-width: 430px )
+        margin-bottom: 0
+  &__wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    flex: 0 0 166px
+    @media  ( max-width: 992px )
+      flex: 0 0 185px 
+    @media  ( max-width: 787px )  
+      flex: 0 0 50%  
+      text-align: center
+      margin-top: 40px
+    @media  ( max-width: 430px )
+      flex: 0 0 100%
+.timetable-table
+  &__subtitle
+    margin: 45px 0 30px
+    @media  ( max-width: 787px )
+      margin: 15px 0 10px
+  &__text
+    margin: 0
+    @media  ( max-width: 787px )
+      max-width: 185px
+      margin: 0 auto
+    @media  ( max-width: 430px )
+      max-width: 225px

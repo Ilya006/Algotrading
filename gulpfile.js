@@ -1,82 +1,81 @@
-const {src, dest, watch, series} = require('gulp');
-const browserSync = require('browser-sync').create()
+const { src, dest, parallel, series, watch } = require('gulp');
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
 const sass = require('gulp-sass');
-const autoprefixer =  require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const  minify  =  require ('gulp-minify' );
-const htmlmin = require('gulp-htmlmin');
-const tinypng = require('gulp-tinypng-compress');
+const imagemin = require('gulp-imagemin');
+var newer = require('gulp-newer');
+var del = require('del');
 
-// Static server
-function bs() {
-  serveSass()
+
+function browsersync() {
   browserSync.init({
-      server: {
-          baseDir: "./"
-      }
-  });
-  watch("./*.html").on('change', browserSync.reload);
-  watch("./sass/**/*.sass", serveSass);
-  watch("./sass/**/*.scss", serveSass);
-  watch("./js/*.js").on('change', browserSync.reload);
+    server: { baseDir: 'app/' },
+    notify: false,
+  })
 };
 
-function serveSass() {
-  return src("./sass/**/*.sass", "./sass/**/*.scss")
-      .pipe(sass())
-      .pipe(autoprefixer({
-        cascade:  false
-      }))
-      .pipe(dest("./css"))
-      .pipe(browserSync.stream());
+function scripts() {
+  return src([
+    // добавить все файлы js в один
+    'app/js/main.js'
+  ])
+  .pipe(concat('main.min.js'))
+  .pipe(uglify())
+  .pipe(dest('app/js'))
+  .pipe(browserSync.stream())
 };
 
-function buildCSS(dont) {
-  src('css/**/**.css')
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(dest('dist/css/'));
-  dont();
+function styles() {
+  return src('app/sass/style.sass')
+  .pipe(sass())
+  .pipe(concat('main.min.css'))
+  .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+  .pipe(cleanCSS(( { level: { 1: {specialComments: 0} }/*, format: 'beautify' красивый вид css*/ } )))
+  .pipe(dest('app/css/'))
+  .pipe(browserSync.stream())
 };
 
-function buildJS(dont) {
-  src(['js/**.js', 'js/**.min.js'])
-    .pipe(minify({
-      ext:{
-        min:'.js'
-      }
-    }))
-    .pipe(dest('dist/js/')); 
-  dont();
+function images() {
+  return src('app/images/src/**/*')
+  .pipe(newer('app/images/dest/'))
+  .pipe(imagemin())
+  .pipe(dest('app/images/dest/'))
 };
 
-function htmlMin(dont) {
-  src('**html')
-    .pipe(htmlmin({ collapseWhitespace:  true  }))
-    .pipe(dest('dist/'))
-  dont();
+// удаляет все файлы в image
+function cleanimg() {
+  return del('app/images/dest/**/*', {force: true})
 };
 
-function php(dont) {
-  src('**.php')
-    .pipe(dest('dist/'));
-  src('phpmailer/**/**')
-    .pipe(dest('dist/phpmailer'))
-  dont();
+function cleandist() {
+  return del('dist/**/*', {force: true})
 };
 
-function fonts(dont) {
-  src('fonts/**/**')
-    .pipe(dest('dist/fonts'))
-  dont();
+function buildCopy() {
+  return src([
+    'app/css/**/*',
+    'app/js/**/*',
+    'app/images/dest/**/*',
+    'app/**/*.html',
+  ], { base: 'app' })
+  .pipe(dest('dist'));
+}
+
+function startwatch() {
+  watch('app/sass/**/*', styles);
+  watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
+  watch('app/**/*.html').on('change', browserSync.reload);
+  watch('app/images/src/**/*', images);
 };
 
-function imageMin(done){
-  src('img/**/**')
-    .pipe(dest('dist/img/'))
-  src('img/**/*.svg')
-    .pipe(dest('dist/img/'))
-  done();
-};
+exports.browsersync = browsersync;
+exports.scripts = scripts;
+exports.styles = styles;
+exports.images = images;
+exports.cleanimg = cleanimg;
+exports.build = series(cleandist, styles, scripts, images, buildCopy);
 
-exports.serve = bs;
-exports.build = series(buildCSS, buildJS, htmlMin, php, fonts, imageMin);
+exports.default = parallel(styles, scripts, browsersync, startwatch);
