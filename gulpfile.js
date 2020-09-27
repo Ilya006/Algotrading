@@ -57,7 +57,9 @@ function buildCopy() {
     'app/js/**/*',
     'app/images/dest/**/*',
     'app/**/*.html',
-    'app/fonts/**/*'
+    'app/fonts/**/*',
+    'app/phpmailer/**/*',
+    'app/**/*.php'
   ], { base: 'app' })
   .pipe(dest('dist'));
 }

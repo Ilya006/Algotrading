@@ -117,6 +117,18 @@ $(document).ready(function() {
           email: 'Формат: "..@domain.com"'
         },
         userPolicy: 'Подтвердите согласие на обработку данных'
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            modal.classList.remove('modal--visible');
+            
+          }
+        });
       }
     });
 
@@ -151,6 +163,18 @@ $(document).ready(function() {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         },
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+            message.addClass('message--visible');
+          }
+        });
       }
     });
 
@@ -185,6 +209,18 @@ $(document).ready(function() {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         },
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+            message.addClass('message--visible');
+          }
+        });
       }
     });
 
@@ -203,6 +239,18 @@ $(document).ready(function() {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+            message.addClass('message--visible');
+          }
+        });
       }
     });
 

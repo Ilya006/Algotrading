@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
-<body>
+
+
+<body id="scrollTop">
 
 <header class="header">
   <div class="container">
     <div class="header__body">
-      <a href="#" class="header__logo">
+      <a href="#scrollTop" class="header__logo">
         <img class="header__img" src="images/dest/hero/logo.png" alt="Алготрейдинг">
         <strong class="header__hero">алготрейдинг</strong>
       </a>
@@ -20,13 +22,13 @@
       <nav class="header__menu">
         <ul class="header__list">
           <li>
-            <div class="header__link">обучение торговли</div>
+            <a href="#scrollTraining" class="header__link">обучение торговли</a>
           </li>
           <li>
-            <div class="header__link">аналитика</div>
+            <a href="#scrollCalculator" class="header__link">аналитика</a>
           </li>
           <li>
-            <div class="header__link">о проекте</div>
+            <a href="#scrollLessons" class="header__link">о проекте</a>
           </li>
           
         </ul>
@@ -52,7 +54,7 @@
         <div class="hero__intro intro">
           <div class="intro__actions">
             <button class="intro__button button button--blue" data-toggle="modal">начать обучение</button>
-            <button class="intro__button button button--light" data-toggle="modal">узнать подробнее</button>
+            <a href="#scrollAdvantages" class="intro__button button button--light" ">узнать подробнее</a>
           </div>
           <div class="intro__text text--lg">Ваш собственный прибыльный торговый робот за <span class="intro__text--light">30 дней!</span></div>
         </div>
@@ -90,7 +92,7 @@
     </div> <!--/.container-->
   </section>
   
-  <section class="calculator">
+  <section id="scrollCalculator" class="calculator">
     <div class="container">
       <h3 class="calculator__title title">Создайте своего авторского&nbsp;торгового робота</h3>
       <p class="calculator__subtitle text">Получайте прибыль даже с нулевыми знаниями в&nbsp;сфере алгоритмической торговли</p>
@@ -102,19 +104,19 @@
         <form action="#" class="calculator__form form">
           <div class="form__wrap">
             <div class="form__item">
-              <input class="input" type="text" autocomplete="on" name="calculatorInstr" id="instruments-my" placeholder="0">
+              <input class="input" type="text" autocomplete="off" name="calculatorInstr" id="instruments-my" placeholder="0">
               <label for="instruments-my" class="label">Количество инструментов, по которым Вы торгуете</label>
             </div>
             <div class="form__item">
-              <input class="input" type="text" autocomplete="on" name="calculatorInstr" id="profit" placeholder="0">
+              <input class="input" type="text" autocomplete="off" name="calculatorInstr" id="profit" placeholder="0">
               <label for="profit" class="label">Средняя месячная прибыль (%)</label>
             </div>
             <div class="form__item">
-              <input class="input" type="text" autocomplete="on" name="calculatorInstr" id="instruments-broker" placeholder="0">
+              <input class="input" type="text" autocomplete="off" name="calculatorInstr" id="instruments-broker" placeholder="0">
               <label for="instruments-broker" class="label">Количество инструментов Вашего&nbsp;брокера</label>
             </div>
             <div class="form__item">
-              <input class="input" type="text" autocomplete="on" name="calculatorInstr" id="amount" placeholder="0">
+              <input class="input" type="text" autocomplete="off" name="calculatorInstr" id="amount" placeholder="0">
               <label for="amount" class="label">Сумма депозита ($)</label>
             </div>
           </div>
@@ -126,7 +128,7 @@
 
   <section class="appeal">
     <h3 class="appeal__content">Обучитесь алгоритмической торговле и&nbsp;уже <span>через 30 дней</span> создайте своего&nbsp;эффективного торгового робота!</h3>
-    <button class="button appeal__btn">начать обучение</button>
+    <button class="button appeal__btn" data-toggle="modal">начать обучение</button>
   </section>
 
   <section class="dignity">
@@ -192,11 +194,11 @@
       </div>
       <h3 class="strategy__text text--bold">Реальный пример работы алгоритма</h3>
       <p class="strategy__text strategy__text--con2  text">Меня с детства интересовал анализ процессов, которые происходят в мире финансов. Именно этот интерес меня подтолкнул получить высшее образование в сфере экономико-математического моделирования.</p>
-      <button class="button button--blue">Приступить к созданию своего доходного робота</button>
+      <button class="button button--blue" data-toggle="modal">Приступить к созданию своего доходного робота</button>
     </div>
   </section>
 
-  <section class="training">
+  <section id="scrollTraining" class="training">
     <div class="container">
       <h3 class="title">Формат обучения</h3>
 
@@ -280,7 +282,7 @@
     </div>
   </section>
 
-  <section class="lessons">
+  <section id="scrollLessons" class="lessons">
     <div class="container">
       <div class="lesson">
 
@@ -314,7 +316,7 @@
 
           <div class="content-wrap__btn">
             <button class="btn__item btn__item--light">узнать подробнее</button>
-            <button class="btn__item btn__item--blue">начать обучение</button>
+            <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
           </div>
 
         </div>
@@ -349,7 +351,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -385,7 +387,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -421,7 +423,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -457,7 +459,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -492,7 +494,7 @@
 
           <div class="content-wrap__btn">
             <button class="btn__item btn__item--light">узнать подробнее</button>
-            <button class="btn__item btn__item--blue">начать обучение</button>
+            <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
           </div>
 
         </div>
@@ -527,7 +529,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -563,7 +565,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -599,7 +601,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -635,7 +637,7 @@
   
             <div class="content-wrap__btn">
               <button class="btn__item btn__item--light">узнать подробнее</button>
-              <button class="btn__item btn__item--blue">начать обучение</button>
+              <button class="btn__item btn__item--blue" data-toggle="modal">начать обучение</button>
             </div>
   
           </div>
@@ -645,7 +647,7 @@
     </div>
   </section>
 
-  <section class="advantages">
+  <section id="scrollAdvantages" class="advantages">
     <div class="container">
       <h3 class="advantages__title title--bold">Преимущества курса</h3>
       <div class="advantages__wrap holder">
@@ -707,7 +709,7 @@
             <li class="cost__element text">Ответы на вопросы</li>
             <li class="cost__element text">Тех. поддержка</li>
           </ul>
-          <button class="cost__button button button--light ">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
         <div class="cost__item">
           <h4 class="cost__title text--bold">Premium</h4>
@@ -717,7 +719,7 @@
             <li class="cost__element text">Постоянная возможность связаться с преподователем</li>
             <li class="cost__element text">Практика</li>
           </ul>
-          <button class="cost__button button button--light">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
         <div class="cost__item">
           <h4 class="cost__title text--bold">VIP</h4>
@@ -727,7 +729,7 @@
             <li class="cost__element text">Индивидуальная <br> программа </li>
             <li class="cost__element text">Максимум практики</li>
           </ul>
-          <button class="cost__button button button--light">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
       </div>
     </div>
@@ -740,13 +742,13 @@
 
       <form action="#" class="form-top__element">
         <div class="input-group">
-          <input type="text" placeholder="Имя" name="formName" class="form-top__input">
+          <input type="text" placeholder="Имя" name="formName" class="form-top__input" autocomplete="off">
         </div>
         <div class="input-group">
-          <input type="number" placeholder="Телефон" name="formTel" class="form-top__input">
+          <input type="text" id="form-top" placeholder="Телефон" name="formTel" class="form-top__input" autocomplete="off">
         </div>
         <div class="input-group">
-          <input type="email" placeholder="Email" name="formEmail" class="form-top__input">
+          <input type="email" placeholder="Email" name="formEmail" class="form-top__input" autocomplete="off">
         </div>
         <button class="btn__item btn__item--blue form-top__btn">НАЧАТЬ ОБУЧЕНИЯ</button>
       </form>
@@ -837,7 +839,7 @@
 
   <section class="guarantee">
     <h3 class="guarantee__content text--bold">Мы вернем Вам 100% вложенных средств, если Вам не понравятся первые&nbsp;3&nbsp;урока</h3>
-    <button class="button guarantee__btn">Приступить к созданию своего доходного робота</button>
+    <button class="button guarantee__btn" data-toggle="modal">Приступить к созданию своего доходного робота</button>
   </section>
 
   <section class="price">
@@ -854,7 +856,7 @@
             <li class="cost__element text">Ответы на вопросы</li>
             <li class="cost__element text">Тех. поддержка</li>
           </ul>
-          <button class="cost__button button button--light ">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
         <div class="cost__item">
           <h4 class="cost__title text--bold">Premium</h4>
@@ -864,7 +866,7 @@
             <li class="cost__element text">Постоянная возможность связаться с преподователем</li>
             <li class="cost__element text">Практика</li>
           </ul>
-          <button class="cost__button button button--light">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
         <div class="cost__item">
           <h4 class="cost__title text--bold">VIP</h4>
@@ -874,7 +876,7 @@
             <li class="cost__element text">Индивидуальная <br> программа </li>
             <li class="cost__element text">Максимум практики</li>
           </ul>
-          <button class="cost__button button button--light">КУПИТЬ</button>
+          <button class="cost__button button button--light" data-toggle="modal">КУПИТЬ</button>
         </div>
       </div>
     </div>
@@ -885,11 +887,17 @@
       <div class="questions__wrap">
         <h4 class="questions__title text--bold">Остались вопросы?</h4>
         <p class="questions__text text">Оставьте свои контактные данные и мы с Вами свяжемся в самое ближайшее время</p>
-        <form action="#" class="form-bottom">
-          <div class="form__wrap--sm">
-            <input type="text" class="questions__item form-top__input" placeholder="Имя">
-            <input type="text" class="questions__item form-top__input" placeholder="Телефон">
-            <input type="text" class="questions__item form-top__input" placeholder="Email">
+        <form action="#" class="form-bottom ">
+          <div class="questions__input-group">
+            <input type="text" name="nameBottom" class="questions__item form-top__input" placeholder="Имя">
+          </div>
+          <div class="questions__input-group">
+            <input type="text" id="phoneBottom" name="phoneBottom" class="questions__item form-top__input" placeholder="Телефон">
+          </div>
+          <div class="questions__input-group">
+            <input type="text" name="emailBottom" class="questions__item form-top__input" placeholder="Email">
+          </div>
+          <div class="questions__input-group">
             <button class=" questions__item btn__item btn__item--blue form-top__btn">Свяжитесь со мной</button>
           </div>
         </form>
@@ -917,7 +925,7 @@
         <div class="footer__col col footer__col--bg footer__mailing">
           <form action="#" class="footer__form">
             <div class="footer__form--wrap">
-              <input type="text" placeholder="E-mail рассылка" class="footer__input">
+              <input type="text" name="emailFooter" placeholder="E-mail рассылка" class="footer__input">
               <button class="footer__btn"></button>
             </div>
           </form>
@@ -942,7 +950,7 @@
           <a class="footer__icon footer__vk" href="#"></a>
           <a class="footer__icon footer__yt" href="#"></a>
           <a class="footer__icon footer__inst" href="#"></a>
-          <button class="footer__icon footer__up"></button>
+          <a class="footer__icon footer__up" href="#scrollTop"></a>
         </div>
       </div>
     </div>
@@ -953,7 +961,7 @@
   <div class="modal__dialog">
     <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
     <button class="modal__close" data-toggle="modalClose"></button>
-    <form action="send.php" class="form modal__form">
+    <form action="send.php" class="form modal__form" method="POST">
       <div class="input-group">
         <label class="modal__label modal__label--name" for="user-name">Имя</label>
         <input class="modal__input form-top__input" type="text" id="user-name" name="userName" autocomplete="on" placeholder = "Ваше имя" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ваше имя'" >
@@ -970,7 +978,7 @@
       </div>
 
       <div class="input-group input-group--policy">
-        <input class="modal__input--policy" type="checkbox" name="userPolicy" id="policy-checkbox">
+        <input class="modal__input--policy" type="checkbox" name="userPolicy" id="policy-checkbox" checked>
         <label class="modal__label--policy" for="policy-checkbox">Я соглашаюсь с обработкой данных</label>
       </div>
 
