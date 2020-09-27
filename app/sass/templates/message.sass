@@ -1,0 +1,61 @@
+.message
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(19, 19, 19, 0.6)
+  display: flex
+  z-index: 99
+  overflow-y: hidden
+  &__modal
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+    background-color: #eaf1f7
+    padding: 30px 60px
+    border-radius: 10px
+    border: 1px solid #06bee1
+  &__check
+    margin-right: 10px
+    width: 100px
+    height: auto
+  &__close
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url(../images/dest/close.svg) no-repeat center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    &:focus
+      outline: none
+    &:active
+      outline: none
+.message__check img
+  display: block
+  width: 100px
+  height: auto
+.message__text
+  font-size: 18px
+  font-weight: 400
+  & span 
+    margin-bottom: 10px
+    font-size: 28px
+    font-weight: 700
+    display: block
+    text-align: center
+
+.message--visible
+  opacity: 1
+  visibility: visible

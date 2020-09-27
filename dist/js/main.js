@@ -54,10 +54,12 @@ $(document).ready(function() {
 
     // модаотное окно
     let modalBtn = document.querySelectorAll('[data-toggle=modal]'),
-        modal = document.querySelector('.modal'),
-        modalDialog = document.querySelector('.modal__dialog'),
-        modalClose = document.querySelector('[data-toggle=modalClose]');
-        console.log(modalBtn);
+    modal = document.querySelector('.modal'),
+    modalDialog = document.querySelector('.modal__dialog'),
+    modalClose = document.querySelector('[data-toggle=modalClose]'),
+    messageModal = document.querySelector('.message'),
+    messageDialog = document.querySelector('.message__modal'),
+    messaageClose = document.querySelector('.message__close');
 
     for( openModal of modalBtn) {
       if(openModal) {
@@ -77,10 +79,20 @@ $(document).ready(function() {
       modal.classList.remove('modal--visible');
     };
 
+    messaageClose.onclick = function() {
+      messageModal.classList.remove('message--visible');
+    };
+
     // закрытие вне окна
     modal.addEventListener('click', function(e) {
       if(!modalDialog.contains(e.target)) {
         modal.classList.remove('modal--visible')
+      }
+    });
+
+    messageModal.addEventListener('click', function(e) {
+      if(!messageDialog.contains(e.target)) {
+        messageModal.classList.remove('message--visible');
       }
     });
 
@@ -90,7 +102,6 @@ $(document).ready(function() {
     //     modal.classList.remove('modal--visible')
     //   }
     // });
-
 
     // валидация формы модального окна
     $('.modal__form').validate({
@@ -126,7 +137,7 @@ $(document).ready(function() {
           success: function (response) {
             $(form)[0].reset();
             modal.classList.remove('modal--visible');
-            
+            messageModal.classList.add('message--visible')
           }
         });
       }
@@ -136,30 +147,30 @@ $(document).ready(function() {
     $('.form-top__element').validate({
       errorClass: 'invalid',
       rules: {
-        formName: {
+        userName: {
           required: true,
           minlength: 2
         },
-        formTel: {
+        userPhone: {
           required: true,
           minlength: 17,
         },
-        formEmail: {
+        userEmail: {
           required: true,
           email: true
         },
       },
       errorElement: 'em',
       messages: {
-        formName: {
+        userName: {
           required: 'Введите Имя',
           minlength: 'Имя слишком короткое'
         },
-        formTel: {
+        userPhone: {
           required: 'Введите телефон',
           minlength: 'Нерный телефон'
         },
-        formEmail: {
+        userEmail: {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         },
@@ -171,8 +182,7 @@ $(document).ready(function() {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            modal.removeClass('modal--visible');
-            message.addClass('message--visible');
+            messageModal.classList.add('message--visible');
           }
         });
       }
@@ -182,30 +192,30 @@ $(document).ready(function() {
     $('.form-bottom ').validate({
       errorClass: 'invalidBottom',
       rules: {
-        nameBottom: {
+        userName: {
           required: true,
           minlength: 2
         },
-        phoneBottom: {
+        userPhone: {
           required: true,
           minlength: 17,
         },
-        emailBottom: {
+        userEmail: {
           required: true,
           email: true
         },
       },
       errorElement: 'em',
       messages: {
-        nameBottom: {
+        userName: {
           required: 'Введите Имя',
           minlength: 'Имя слишком короткое'
         },
-        phoneBottom: {
+        userPhone: {
           required: 'Введите телефон',
           minlength: 'Нерный телефон'
         },
-        emailBottom: {
+        userEmail: {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         },
@@ -217,8 +227,7 @@ $(document).ready(function() {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            modal.removeClass('modal--visible');
-            message.addClass('message--visible');
+            messageModal.classList.add('message--visible');
           }
         });
       }
@@ -228,14 +237,14 @@ $(document).ready(function() {
     $('.footer__form').validate({
       errorClass: 'invalidfooter',
       rules: {
-        emailFooter: {
+        userEmail: {
           required: true,
           email: true
         }
       },
       errorElement: 'em',
       messages: {
-        emailFooter: {
+        userEmail: {
           required: 'Ведите Email',
           email: 'Формат: "..@domain.com"'
         }
@@ -247,8 +256,7 @@ $(document).ready(function() {
           data: $(form).serialize(),
           success: function (response) {
             $(form)[0].reset();
-            modal.removeClass('modal--visible');
-            message.addClass('message--visible');
+            messageModal.classList.add('message--visible');
           }
         });
       }

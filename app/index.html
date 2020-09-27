@@ -742,13 +742,13 @@
 
       <form action="#" class="form-top__element">
         <div class="input-group">
-          <input type="text" placeholder="Имя" name="formName" class="form-top__input" autocomplete="off">
+          <input type="text" placeholder="Имя" name="userName" class="form-top__input" autocomplete="off">
         </div>
         <div class="input-group">
-          <input type="text" id="form-top" placeholder="Телефон" name="formTel" class="form-top__input" autocomplete="off">
+          <input type="text" id="form-top" placeholder="Телефон" name="userPhone" class="form-top__input" autocomplete="off">
         </div>
         <div class="input-group">
-          <input type="email" placeholder="Email" name="formEmail" class="form-top__input" autocomplete="off">
+          <input type="email" placeholder="Email" name="userEmail" class="form-top__input" autocomplete="off">
         </div>
         <button class="btn__item btn__item--blue form-top__btn">НАЧАТЬ ОБУЧЕНИЯ</button>
       </form>
@@ -889,13 +889,13 @@
         <p class="questions__text text">Оставьте свои контактные данные и мы с Вами свяжемся в самое ближайшее время</p>
         <form action="#" class="form-bottom ">
           <div class="questions__input-group">
-            <input type="text" name="nameBottom" class="questions__item form-top__input" placeholder="Имя">
+            <input type="text" name="userName" class="questions__item form-top__input" placeholder="Имя">
           </div>
           <div class="questions__input-group">
-            <input type="text" id="phoneBottom" name="phoneBottom" class="questions__item form-top__input" placeholder="Телефон">
+            <input type="text" id="phoneBottom" name="userPhone" class="questions__item form-top__input" placeholder="Телефон">
           </div>
           <div class="questions__input-group">
-            <input type="text" name="emailBottom" class="questions__item form-top__input" placeholder="Email">
+            <input type="text" name="userEmail" class="questions__item form-top__input" placeholder="Email">
           </div>
           <div class="questions__input-group">
             <button class=" questions__item btn__item btn__item--blue form-top__btn">Свяжитесь со мной</button>
@@ -925,7 +925,7 @@
         <div class="footer__col col footer__col--bg footer__mailing">
           <form action="#" class="footer__form">
             <div class="footer__form--wrap">
-              <input type="text" name="emailFooter" placeholder="E-mail рассылка" class="footer__input">
+              <input type="text" name="userEmail" placeholder="E-mail рассылка" class="footer__input">
               <button class="footer__btn"></button>
             </div>
           </form>
@@ -985,6 +985,16 @@
       <input class="modal__submit" type="submit" value="Отправить">
 
     </form>
+  </div>
+</div>
+
+<div class="message">
+  <div class="message__modal">
+    <span class="message__check">
+      <img src="images/dest/message.png" alt="">
+    </span>
+    <p class="message__text"><span>Заявка оформленна!</span>В скором времени с вами свяжутся.</p>
+    <button class="message__close" data-toggle="modalClose"></button>
   </div>
 </div>
 
